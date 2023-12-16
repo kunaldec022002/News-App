@@ -1,7 +1,7 @@
 import React from "react";
 import "./NewsArticle.css"
 
-function NewsArticle({author,title,description,url,urlToImage,publishdAt,content})
+function NewsArticle({author,title,description,url,urlToImage,publishdAt,})
 {
     return(
         <div className="news-articales-card">
@@ -15,9 +15,6 @@ function NewsArticle({author,title,description,url,urlToImage,publishdAt,content
         </div>
 
         <p>{description}</p>
-
-        <p>{content}</p>
-
 
         <a href={url} target="blank" className="btn-read-more">Read More</a>
 

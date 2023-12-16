@@ -7,7 +7,7 @@ function Home()
 {
     const [News , setNews] = useState([])
 
-    const [searchQuery,setsearchQuery] = useState('sports')
+    const [searchQuery,setsearchQuery] = useState('')
 
     const loadNews = async ()=>
     {
@@ -25,13 +25,10 @@ function Home()
     useEffect(()=>
     {
           loadNews()
-    }, []
+    }, [searchQuery]
     )
 
-    useEffect(()=>
-    {
-        loadNews()
-    },[searchQuery])
+
     return(
         <div>
             <h1 className="app-title">News App</h1>
@@ -48,8 +45,9 @@ function Home()
                 {
                 News.map((newsArticle,index)=>{
                     const { author,title,description,url,urlToImage,publishdAt,content} = newsArticle
-                    return( <NewsArticle author={author} title={title} description={description} url={url} urlToImage={urlToImage} publishdAt ={publishdAt} content={content}
-                    key={index}/>
+                    return( <NewsArticle author={author} title={title} description={description} url={url} 
+                               urlToImage={urlToImage} publishdAt ={publishdAt} content={content}
+                             key={index}/>
                     )
                 
                 })
