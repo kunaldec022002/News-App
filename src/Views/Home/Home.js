@@ -26,7 +26,22 @@ function Home()
 
     return(
         <div>
-            <h1>News App</h1>   
+            <h1>News App</h1> 
+
+            {
+                news.map((newsArticle, index)=>{
+
+                    const {author, title, description, url, urlToImage, publishedAt, content} = newsArticle
+
+                    return(
+                       
+                        <div>
+                            
+                        <img src={urlToImage}  alt=''/>
+                        </div>
+                    )
+                })
+            }  
         </div>
     )
 }
