@@ -35,9 +35,11 @@ function Home()
 
                     return(
                        
-                        <div>
+                        <div className='news-article-card' key={index}>
                             
-                        <img src={urlToImage}  alt=''/>
+                            <img src={urlToImage} className='news-article-img'  alt=''/>
+                            <h1>{title}</h1>
+
                         </div>
                     )
                 })
