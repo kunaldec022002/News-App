@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Home.css';
+import NewsArticle from '../../Component/NewsArticle/NewsArticle';
 
 function Home()
 {
@@ -35,12 +36,7 @@ function Home()
 
                     return(
                        
-                        <div className='news-article-card' key={index}>
-                            
-                            <img src={urlToImage} className='news-article-img'  alt=''/>
-                            <h1>{title}</h1>
-
-                        </div>
+                        <NewsArticle/>
                     )
                 })
             }  
