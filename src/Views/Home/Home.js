@@ -8,18 +8,30 @@ function Home()
 {
 
     const [news , setNews] = useState([]);
+    const [searchQuery, setSearchQuery] = useState(" pune");
 
     const loadNews = async () => {
 
-        const response = await axios.get("https://newsapi.org/v2/everything?q=apple&from=2024-03-02&to=2024-03-02&sortBy=popularity&apiKey=70444052d2d2459c99023e4532137427")
+       try
+       {
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-03-02&to=2024-03-02&sortBy=popularity&apiKey=70444052d2d2459c99023e4532137427`);
+
         setNews(response.data.articles);
 
+       }
+
+       catch(error)
+       {
+        console.log(error)
+       }
 
     }
 
     useEffect (() => {
         loadNews()
     },[])
+
+    useEffect (() =>{loadNews()},[searchQuery])
 
  
   
@@ -28,6 +40,10 @@ function Home()
     return(
         <div>
             <h1>News App</h1> 
+
+            <input type='text' 
+            value={searchQuery}
+             onChange={(e)=> {setSearchQuery(e.target.value)}}/>
 
             <div className='news-container'>
 
