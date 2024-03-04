@@ -29,17 +29,24 @@ function Home()
         <div>
             <h1>News App</h1> 
 
-            {
-                news.map((newsArticle, index)=>{
+            <div className='news-container'>
 
-                    const {author, title, description, url, urlToImage, publishedAt, content} = newsArticle
+                {
+                    news.map((newsArticle, index)=>{
 
-                    return(
-                       
-                        <NewsArticle author={author} title={title} description={description} url={url} urlToImage={urlToImage} publishedAt={publishedAt} content={content} key={index}/>
-                    )
-                })
-            }  
+                        const {author, title, description, url, urlToImage, publishedAt, content} = newsArticle  //destructuring
+
+                        return(
+                        
+                            <NewsArticle author={author} title={title} description={description} url={url} urlToImage={urlToImage} publishedAt={publishedAt} content={content} key={index}/>  //component main props pass kiye
+                        )
+                    })
+                }  
+
+
+            </div>
+
+        
         </div>
     )
 }

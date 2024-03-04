@@ -7,13 +7,25 @@ function NewsArticle ({author, title, description, url, urlToImage, publishedAt,
    
     <div className='news-article-card' >
                             
-                              <img src={urlToImage} className='news-article-img'  alt=''/>
-                              <h1>{title}</h1>
-                              <p>{author}</p>
-                              <p>{description}</p>
-                              <h5>{url}</h5>
-                              <h3>{publishedAt}</h3>
-                              <h5>{content}</h5>
+      <img src={urlToImage} className='news-article-img'  alt=''/>
+      <h1 className="article-title">{title}</h1>
+
+      <div className="article-info">
+            
+        <p className="article-auhor">{author}</p>
+        <p className="article-publisheAt">{publishedAt}</p>
+
+      </div> 
+
+      <p className="article-description">{description}</p>
+      <h4 className="article-content">{content}</h4>
+
+      <a href={url} target="_blank" className="btn-read-more">Read More</a>
+        
+      
+    
+      
+  
                               
 
      </div>
