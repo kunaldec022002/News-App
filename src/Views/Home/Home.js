@@ -4,6 +4,7 @@ import axios from 'axios';
 import './Home.css';
 import NewsArticle from '../../Component/NewsArticle/NewsArticle';
 
+
 function Home()
 {
 
@@ -14,15 +15,15 @@ function Home()
 
        try
        {
-        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-03-02&to=2024-03-02&sortBy=popularity&apiKey=70444052d2d2459c99023e4532137427`);
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-03-02&to=2024-03-02&sortBy=popularity&apiKey=${process.env.REACT_APP_API_KEY}`);
 
         setNews(response.data.articles);
 
        }
 
-       catch(error)
+       catch(err)
        {
-        console.log(error)
+        console.log(err)
        }
 
     }
@@ -31,7 +32,10 @@ function Home()
         loadNews()
     },[])
 
-    useEffect (() =>{loadNews()},[searchQuery])
+    useEffect (() =>
+    {
+        loadNews()
+    },[searchQuery])
 
  
   
@@ -39,11 +43,25 @@ function Home()
 
     return(
         <div>
-            <h1>News App</h1> 
 
-            <input type='text' 
-            value={searchQuery}
-             onChange={(e)=> {setSearchQuery(e.target.value)}}/>
+            <div>
+                  
+                <nav className="navbar navbar-expand-lg bg-black">
+                    <div className="container-fluid">
+                    <a class="navbar-brand" id='navbar-brand' >NEWS_APP</a>
+                        
+                        <form className="d-flex" role="search">
+                            <input className="form-control me-2" id="serach-engine"type="search" 
+                            value={searchQuery} 
+                            onChange={(e)=> {setSearchQuery(e.target.value)}} placeholder="Search Any News" aria-label="Search"/>
+                        
+                        </form>
+                        
+                    </div>
+                </nav>
+
+            </div>
+           
 
             <div className='news-container'>
 

@@ -1,7 +1,7 @@
 .news-article-img
 {
     height:200px ;
-    width: 420px;
+    width: 400px;
     display: block;
     object-fit: cover;
     margin: 0px auto;
@@ -9,6 +9,7 @@
 
 .news-article-card
 {
+    margin-top: 40px;
     margin-bottom: 20px;
     width: 420px;
     border: 1px solid #eabbbb;
@@ -31,9 +32,17 @@
 
 .btn-read-more
 {
+  display: block;
+  margin: 0 auto;
   text-decoration: none;
+  width: fit-content;
   background-color: #000000;
   padding: 5px 10px;
   border-radius: 5px;
   color: #fff;
+}
+.btn-read-more:hover
+{
+  background-color:burlywood;
+  color: #000000;
 }

@@ -2,5 +2,24 @@
 {
   display: flex;
   flex-wrap: wrap;
+
   justify-content:space-around ;
+}
+.text-center
+{
+  text-align: center;
+}
+
+
+
+#navbar-brand
+{
+  color: #fff;
+}
+
+#serach-engine
+{
+  width: 500px;
+  text-align: center;
+ 
 }
