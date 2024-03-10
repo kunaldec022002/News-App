@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Home.css';
 import NewsArticle from '../../Component/NewsArticle/NewsArticle';
@@ -15,15 +15,15 @@ function Home()
 
        try
        {
-        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-03-02&to=2024-03-02&sortBy=popularity&apiKey=${process.env.REACT_APP_API_KEY}`);
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-03-09&to=2024-03-09&sortBy=popularity&apiKey=70444052d2d2459c99023e4532137427`);
 
         setNews(response.data.articles);
 
        }
 
-       catch(err)
+       catch(error)
        {
-        console.log(err)
+        console.log(error)
        }
 
     }
@@ -48,7 +48,7 @@ function Home()
                   
                 <nav className="navbar navbar-expand-lg bg-black">
                     <div className="container-fluid">
-                    <a class="navbar-brand" id='navbar-brand' >NEWS_APP</a>
+                    <a className="navbar-brand" id='navbar-brand' >NEWS_APP</a>
                         
                         <form className="d-flex" role="search">
                             <input className="form-control me-2" id="serach-engine"type="search" 
