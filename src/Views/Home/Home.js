@@ -68,7 +68,7 @@ function Home()
                 {
                     news.map((newsArticle, index)=>{
 
-                        const {author, title, description, url, urlToImage, publishedAt, content} = newsArticle  //destructuring
+                        const {author, title, description, url, urlToImage, publishedAt} = newsArticle  //destructuring
 
                         return(
                         

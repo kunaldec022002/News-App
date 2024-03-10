@@ -2,7 +2,7 @@ import React from "react";
 import './NewsArticle.css';
 
 
-function NewsArticle ({author, title, description, url, urlToImage, publishedAt, content}){
+function NewsArticle ({author, title, description, url, urlToImage, publishedAt, }){
   return(
    
     <div className='news-article-card' >
@@ -18,7 +18,7 @@ function NewsArticle ({author, title, description, url, urlToImage, publishedAt,
       </div> 
 
       <p className="article-description">{description}</p>
-      <h4 className="article-content">{content}</h4>
+    
 
       <a href={url} target="_blank" className="btn-read-more">Read More</a>
         
