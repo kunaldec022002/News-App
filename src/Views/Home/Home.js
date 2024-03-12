@@ -72,7 +72,7 @@ function Home()
 
                         return(
                         
-                            <NewsArticle author={author} title={title} description={description} url={url} urlToImage={urlToImage} publishedAt={publishedAt} content={content} key={index}/>  //component main props pass kiye
+                            <NewsArticle author={author} title={title} description={description} url={url} urlToImage={urlToImage} publishedAt={publishedAt}  key={index}/>  //component main props pass kiye
                         )
                     })
                 }  
