@@ -44,9 +44,9 @@ function Home()
     return(
         <div>
 
-            <div>
+            <div id="nav2">
                   
-                <nav className="navbar navbar-expand-lg bg-black">
+                <nav className="navbar navbar-expand-lg bg-black" >
                     <div className="container-fluid">
                     <a className="navbar-brand" id='navbar-brand' >NEWS_APP</a>
                         

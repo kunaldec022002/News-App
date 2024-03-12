@@ -10,7 +10,11 @@
   text-align: center;
 }
 
-
+#nav2
+{
+  top: 0;
+  position: sticky;
+}
 
 #navbar-brand
 {
