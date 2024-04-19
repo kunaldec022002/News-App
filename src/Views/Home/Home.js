@@ -15,7 +15,7 @@ function Home()
 
        try
        {
-        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-03-09&to=2024-03-09&sortBy=popularity&apiKey=70444052d2d2459c99023e4532137427`);
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-04-18&to=2024-04-18&sortBy=popularity&apiKey=${process.env.REACT_APP_API_KEY}`);
 
         setNews(response.data.articles);
 
@@ -61,6 +61,7 @@ function Home()
                 </nav>
 
             </div>
+            
            
 
             <div className='news-container'>
