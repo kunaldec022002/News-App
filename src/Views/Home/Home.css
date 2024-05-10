@@ -2,7 +2,7 @@
 {
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-around ;
+  justify-content:space-around;
 }
 .text-center
 {
@@ -17,12 +17,12 @@
 
 #navbar-brand
 {
-  color: #000;
+  color: #fff;
 }
 
 #navbar
 {
-  background-color: 	#ffffb3;
+  background-color:#5a3232;
 }
 #serach-engine
 {
