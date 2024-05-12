@@ -15,7 +15,7 @@ function Home()
 
        try
        {
-        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-04-25&to=2024-04-25&sortBy=popularity&apiKey=${process.env.REACT_APP_API_KEY}`);
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-05-11&to=2024-05-11&sortBy=popularity&apiKey=70444052d2d2459c99023e4532137427`);
 
         setNews(response.data.articles);
 
