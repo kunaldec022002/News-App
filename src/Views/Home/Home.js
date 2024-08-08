@@ -9,13 +9,13 @@ function Home()
 {
 
     const [news , setNews] = useState([]);
-    const [searchQuery, setSearchQuery] = useState(" pune");
+    const [searchQuery, setSearchQuery] = useState("Delhi");
 
     const loadNews = async () => {
 
        try
        {
-        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-07-29&to=2024-07-29&sortBy=popularity&apiKey=70444052d2d2459c99023e4532137427`);
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-08-07&to=2024-08-07&sortBy=popularity&apiKey=70444052d2d2459c99023e4532137427`);
 
         setNews(response.data.articles);
 
