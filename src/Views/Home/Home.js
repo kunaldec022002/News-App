@@ -5,6 +5,7 @@ import './Home.css';
 import NewsArticle from '../../Component/NewsArticle/NewsArticle';
 
 
+
 function Home()
 {
 
@@ -15,7 +16,7 @@ function Home()
 
        try
        {
-        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-08-07&to=2024-08-07&sortBy=popularity&apiKey=70444052d2d2459c99023e4532137427`);
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-08-10&to=2024-08-10&sortBy=popularity&apiKey=70444052d2d2459c99023e4532137427`);
 
         setNews(response.data.articles);
 
@@ -49,6 +50,7 @@ function Home()
                 <nav className="navbar navbar-expand-lg" id='navbar' >
                     <div className="container-fluid">
                     <a className="navbar-brand" id='navbar-brand' >NEWS_APP</a>
+
                         
                         <form className="d-flex" role="search">
                             <input className="form-control me-2" id="serach-engine"type="search" 
