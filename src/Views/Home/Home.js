@@ -16,14 +16,13 @@ function Home()
 
        try
        {
-        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-08-10&to=2024-08-10&sortBy=popularity&apiKey=70444052d2d2459c99023e4532137427`);
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-08-23&to=2024-08-23&sortBy=popularity&apiKey=${process.env.REACT_APP_NEWS_API}`);
 
-        setNews(response.data.articles);
+        setNews(response.data.articles)
 
        }
 
-       catch(error)
-       {
+       catch(error){
         console.log(error)
        }
 
@@ -31,7 +30,7 @@ function Home()
 
     useEffect (() => {
         loadNews()
-    },[news])
+    },[])
 
     useEffect (() =>
     {
