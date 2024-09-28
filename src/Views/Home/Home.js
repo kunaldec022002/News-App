@@ -16,7 +16,9 @@ function Home()
 
        try
        {
-        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-08-23&to=2024-08-23&sortBy=popularity&apiKey=${process.env.REACT_APP_NEWS_API}`);
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-09-27&to=2024-09-27&sortBy=popularity&apiKey=${process.env.REACT_APP_NEWS_API}`)
+
+
 
         setNews(response.data.articles)
 
@@ -30,7 +32,7 @@ function Home()
 
     useEffect (() => {
         loadNews()
-    },[])
+    },)
 
     useEffect (() =>
     {
@@ -48,7 +50,7 @@ function Home()
                   
                 <nav className="navbar navbar-expand-lg" id='navbar' >
                     <div className="container-fluid">
-                    <a className="navbar-brand" id='navbar-brand' >NEWS_APP</a>
+                    <a className="navbar-brand" href='/' id='navbar-brand' >NEWS_APP</a>
 
                         
                         <form className="d-flex" role="search">

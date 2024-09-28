@@ -1,0 +1,27 @@
+.nav-container
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+ 
+  background-color: aqua;
+  padding: 5px;
+}
+
+.input-search
+{
+  width: 500px;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 30px;
+  text-align: center;
+}
+
+.link-btn
+{
+  text-decoration: none;
+  color: black;
+}
+
+
+
