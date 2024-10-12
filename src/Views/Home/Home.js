@@ -16,7 +16,7 @@ function Home()
 
        try
        {
-        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-09-27&to=2024-09-27&sortBy=popularity&apiKey=${process.env.REACT_APP_NEWS_API}`)
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2024-10-11&to=2024-10-11&sortBy=popularity&apiKey=${process.env.REACT_APP_NEWS_API}`)
 
 
 
@@ -37,7 +37,7 @@ function Home()
     useEffect (() =>
     {
         loadNews()
-    },[searchQuery])
+    },[searchQuery],)
 
  
   
